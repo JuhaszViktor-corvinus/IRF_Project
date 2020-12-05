@@ -27,7 +27,14 @@ namespace FCIIN5_Beadando
 
                 foreach(XmlNode node in doc.DocumentElement)
                 {
-                    string name = node.Attributes[0]
+                    string name = node.Attributes[0].InnerText;
+                    if (name == keresesinput.Text)
+                    {
+                        foreach (XmlNode child in node.ChildNodes)
+                        {
+                            keresesieredmeny.Items.Add(child.InnerText);
+                        }
+                    }
                 }
             }
             else
