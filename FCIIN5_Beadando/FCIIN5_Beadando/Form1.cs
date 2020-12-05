@@ -24,6 +24,11 @@ namespace FCIIN5_Beadando
             {
                 XmlDocument doc = new XmlDocument();
                 doc.Load("Termekek.xml");
+
+                foreach(XmlNode node in doc.DocumentElement)
+                {
+                    string name = node.Attributes[0]
+                }
             }
             else
             {

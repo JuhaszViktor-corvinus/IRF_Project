@@ -1,1 +1,83 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <termekek name="Play Station4">
+    <gyártásido>2013</gyártásido>
+    <gyártó>Sony</gyártó>
+    <szín>Fekete</szín>
+    <ár>100000</ár>
+  </termekek>
+  <termekek name="Play Station5">
+    <gyártásido>2020</gyártásido>
+    <gyártó>Sony</gyártó>
+    <szín>Fehér</szín>
+    <ár>184990</ár>
+  </termekek>
+  <termekek name="Xbox One">
+    <gyártásido>2013</gyártásido>
+    <gyártó>Microsoft</gyártó>
+    <szín>Fekete</szín>
+    <ár>84990</ár>
+  </termekek>
+  <termekek name="Xbox SeriesX">
+    <gyártásido>2020</gyártásido>
+    <gyártó>Microsoft</gyártó>
+    <szín>Fehér</szín>
+    <ár>184990</ár>
+  </termekek>
+  <termekek name="Nintendo Switch">
+    <gyártásido>2017</gyártásido>
+    <gyártó>Nintendo</gyártó>
+    <szín>Piros;Kék</szín>
+    <ár>109000</ár>
+  </termekek>
+  <termekek name="Samsung QLed65">
+    <gyártásido>2020</gyártásido>
+    <gyártó>Samsung</gyártó>
+    <szín>Piros;Zöld;Fekete</szín>
+    <ár>250000</ár>
+  </termekek>
+  <termekek name="Samsung OLed77">
+    <gyártásido>2018</gyártásido>
+    <gyártó>Samsung</gyártó>
+    <szín>Fehér;Kék</szín>
+    <ár>189999</ár>
+  </termekek>
+  <termekek name="Philips 32_4KHD">
+    <gyártásido>2019</gyártásido>
+    <gyártó>Philips</gyártó>
+    <szín>Szürke;Fehér</szín>
+    <ár>109121</ár>
+  </termekek>
+  <termekek name="Sony T46_4KHD">
+    <gyártásido>2020</gyártásido>
+    <gyártó>Sony</gyártó>
+    <szín>Fekete</szín>
+    <ár>204566</ár>
+  </termekek>
+  <termekek name="iPhone 11 Pro">
+    <gyártásido>2018</gyártásido>
+    <gyártó>Apple</gyártó>
+    <szín>Kék;Zöld;Sárga;Piros</szín>
+    <ár>348999</ár>
+  </termekek>
+  <termekek name="iPhone 12 Pro">
+    <gyártásido>2020</gyártásido>
+    <gyártó>Apple</gyártó>
+    <szín>Fekete;Fehér</szín>
+    <ár>440000</ár>
+  </termekek>
+  <termekek name="Samsung S20 Ultra">
+    <gyártásido>2019</gyártásido>
+    <gyártó>Samsung</gyártó>
+    <szín>Fekete</szín>
+    <ár>384780</ár>
+  </termekek>
+  <termekek name="Samsung A71 ">
+    <gyártásido>2020</gyártásido>
+    <gyártó>Samsung</gyártó>
+    <szín>Szürke;Fekete</szín>
+    <ár>102960</ár>
+  </termekek>
+
+
+</root>
