@@ -31,6 +31,8 @@
             this.Kereses = new System.Windows.Forms.Button();
             this.keresesinput = new System.Windows.Forms.TextBox();
             this.keresesieredmeny = new System.Windows.Forms.ListView();
+            this.termekpaletta = new System.Windows.Forms.Button();
+            this.termeklista = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // Kereses
@@ -55,16 +57,38 @@
             this.keresesieredmeny.HideSelection = false;
             this.keresesieredmeny.Location = new System.Drawing.Point(12, 38);
             this.keresesieredmeny.Name = "keresesieredmeny";
-            this.keresesieredmeny.Size = new System.Drawing.Size(436, 400);
+            this.keresesieredmeny.Size = new System.Drawing.Size(305, 400);
             this.keresesieredmeny.TabIndex = 2;
             this.keresesieredmeny.UseCompatibleStateImageBehavior = false;
             this.keresesieredmeny.View = System.Windows.Forms.View.List;
+            // 
+            // termekpaletta
+            // 
+            this.termekpaletta.Location = new System.Drawing.Point(338, 38);
+            this.termekpaletta.Name = "termekpaletta";
+            this.termekpaletta.Size = new System.Drawing.Size(110, 23);
+            this.termekpaletta.TabIndex = 3;
+            this.termekpaletta.Text = "Termékpaletta ";
+            this.termekpaletta.UseVisualStyleBackColor = true;
+            this.termekpaletta.Click += new System.EventHandler(this.termekpaletta_Click);
+            // 
+            // termeklista
+            // 
+            this.termeklista.HideSelection = false;
+            this.termeklista.Location = new System.Drawing.Point(338, 67);
+            this.termeklista.Name = "termeklista";
+            this.termeklista.Size = new System.Drawing.Size(110, 371);
+            this.termeklista.TabIndex = 4;
+            this.termeklista.UseCompatibleStateImageBehavior = false;
+            this.termeklista.View = System.Windows.Forms.View.List;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.termeklista);
+            this.Controls.Add(this.termekpaletta);
             this.Controls.Add(this.keresesieredmeny);
             this.Controls.Add(this.keresesinput);
             this.Controls.Add(this.Kereses);
@@ -80,6 +104,8 @@
         private System.Windows.Forms.Button Kereses;
         private System.Windows.Forms.TextBox keresesinput;
         private System.Windows.Forms.ListView keresesieredmeny;
+        private System.Windows.Forms.Button termekpaletta;
+        private System.Windows.Forms.ListView termeklista;
     }
 }
 

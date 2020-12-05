@@ -44,5 +44,21 @@ namespace FCIIN5_Beadando
                 keresesinput.Focus();
             }
         }
+
+        private void termekpaletta_Click(object sender, EventArgs e)
+        {
+            XmlReader reader = XmlReader.Create("Termekek.xml");
+            while (reader.Read())
+            {
+                if ((reader.NodeType == XmlNodeType.Element) && (reader.Name == "termekek"))
+                {
+                    if (reader.HasAttributes)
+                    {
+                        termeklista.Items.Add(reader.GetAttribute("name"));
+                    }
+                }
+            }
+            Console.ReadLine();
+        }
     }
 }
