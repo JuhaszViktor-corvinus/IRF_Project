@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace FCIIN5_Beadando
 {
@@ -15,9 +16,9 @@ namespace FCIIN5_Beadando
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
-
+        
         private void Kereses_Click(object sender, EventArgs e)
         {
             if (keresesinput.Text != null && keresesinput.Text.Length >= 3)
@@ -43,7 +44,7 @@ namespace FCIIN5_Beadando
                 keresesinput.Text = string.Empty;
                 keresesinput.Focus();
             }
-        }
+        }    
 
         private void termekpaletta_Click(object sender, EventArgs e)
         {
