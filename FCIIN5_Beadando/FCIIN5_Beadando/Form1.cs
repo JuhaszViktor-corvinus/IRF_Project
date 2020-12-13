@@ -154,5 +154,9 @@ namespace FCIIN5_Beadando
                 MessageBox.Show(ex.Message);
             }
         }
+        private void ElegedettsegErt_Click(object sender, EventArgs e) {
+            Form2 ujForm = new Form2();
+            ujForm.Show();
+        }
     }
 }

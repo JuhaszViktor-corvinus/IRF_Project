@@ -42,6 +42,7 @@
             this.MaximumAr = new System.Windows.Forms.TextBox();
             this.TorlesArSzerintGomb = new System.Windows.Forms.Button();
             this.Mentes = new System.Windows.Forms.Button();
+            this.ElegedettsegErt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Kereses
@@ -171,11 +172,23 @@
             this.Mentes.UseVisualStyleBackColor = true;
             this.Mentes.Click += new System.EventHandler(this.Mentes_Click);
             // 
+            // ElegedettsegErt
+            // 
+            this.ElegedettsegErt.Location = new System.Drawing.Point(963, 350);
+            this.ElegedettsegErt.Name = "ElegedettsegErt";
+            this.ElegedettsegErt.Size = new System.Drawing.Size(176, 62);
+            this.ElegedettsegErt.TabIndex = 17;
+            this.ElegedettsegErt.Text = "Elégedettség Értékelés";
+            this.ElegedettsegErt.UseVisualStyleBackColor = true;
+            this.ElegedettsegErt.Click += new System.EventHandler(this.ElegedettsegErt_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(234)))));
             this.ClientSize = new System.Drawing.Size(1200, 465);
+            this.Controls.Add(this.ElegedettsegErt);
             this.Controls.Add(this.Mentes);
             this.Controls.Add(this.TorlesArSzerintGomb);
             this.Controls.Add(this.MaximumAr);
@@ -213,6 +226,7 @@
         private System.Windows.Forms.TextBox MaximumAr;
         private System.Windows.Forms.Button TorlesArSzerintGomb;
         private System.Windows.Forms.Button Mentes;
+        private System.Windows.Forms.Button ElegedettsegErt;
     }
 }
 
