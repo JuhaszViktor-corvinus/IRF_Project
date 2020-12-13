@@ -15,27 +15,49 @@ A mentés gomb segítségével a szűrt listánkat elmenthetjük egy csv file-ba
 Az elégedettség értékelése gomb egy új form-ra vezet át minket, ahol egy trackbaron tudjuk jelezni, hogy mennyire voltunk elégedettek a programmal.
 
 Felhasznált elemek és azok Name és Text tulajdonsága:
+
   Buttonok 8 db:
+  
     Kereses       - Keresés,
+    
     termekpaletta - Termékpaletta,
+    
     ListaGomb     - Listáz,
+    
     TorlesGomb    - Törlés,
+    
     TorlesArSzerintGomb - Ár szerinti törlés,
+    
     Mentes        - Mentés,
+    
     ElegedettsegErt - Elégedettség Értékelése,
+    
     Jovahagyas    - Értékelés jóváhagyása,
+    
    Listák 3db:
+   
     keresesieredmeny,
+    
     termeklista,
+    
     listView1,
+    
    Textboxok 3db:
+   
     keresesinput,
+    
     MinimumAr,
+    
     MaximumAr,
+    
    Labelek 3db:
+   
     label1       - Minimum,
+    
     label2       - Maximum,
+    
     label2       - Form2 Felirata,
+    
 Egyéb elemek:
 Form1, Form2, Termekek XML, Termek osztály, Trackbarosztaly, labelosztaly
 Commitok száma: 10db
