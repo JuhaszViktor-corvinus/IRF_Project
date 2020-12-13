@@ -35,6 +35,7 @@
             this.termeklista = new System.Windows.Forms.ListView();
             this.ListaGomb = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListBox();
+            this.TorlesGomb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Kereses
@@ -102,11 +103,22 @@
             this.listView1.Size = new System.Drawing.Size(700, 225);
             this.listView1.TabIndex = 6;
             // 
+            // TorlesGomb
+            // 
+            this.TorlesGomb.Location = new System.Drawing.Point(731, 38);
+            this.TorlesGomb.Name = "TorlesGomb";
+            this.TorlesGomb.Size = new System.Drawing.Size(75, 23);
+            this.TorlesGomb.TabIndex = 7;
+            this.TorlesGomb.Text = "Törlés";
+            this.TorlesGomb.UseVisualStyleBackColor = true;
+            this.TorlesGomb.Click += new System.EventHandler(this.TorlesGomb_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 465);
+            this.Controls.Add(this.TorlesGomb);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.ListaGomb);
             this.Controls.Add(this.termeklista);
@@ -130,6 +142,7 @@
         private System.Windows.Forms.ListView termeklista;
         private System.Windows.Forms.Button ListaGomb;
         private System.Windows.Forms.ListBox listView1;
+        private System.Windows.Forms.Button TorlesGomb;
     }
 }
 

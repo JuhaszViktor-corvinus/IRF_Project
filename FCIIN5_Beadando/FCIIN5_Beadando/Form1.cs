@@ -22,50 +22,39 @@ namespace FCIIN5_Beadando
         }
         IEnumerable<Termek> Termekek;
 
-        private void Kereses_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (keresesinput.Text != null && keresesinput.Text.Length >= 3)
-                {
+        private void Kereses_Click(object sender, EventArgs e) {
+            try {
+                if (keresesinput.Text != null && keresesinput.Text.Length >= 3) {
                     XmlDocument doc = new XmlDocument();
                     doc.Load("Termekek.xml");
 
-                    foreach (XmlNode node in doc.DocumentElement)
-                    {
+                    foreach (XmlNode node in doc.DocumentElement) {
                         string name = node.Attributes[0].InnerText;
-                        if (name == keresesinput.Text)
-                        {
-                            foreach (XmlNode child in node.ChildNodes)
-                            {
+                        if (name == keresesinput.Text) {
+                            foreach (XmlNode child in node.ChildNodes) {
                                 keresesieredmeny.Items.Add(child.InnerText);
                             }
                         }
                     }
                 }
-                else
-                {
+                else {
                     MessageBox.Show("Nem megfelelő beviteli paraméterek");
                     keresesinput.Text = string.Empty;
                     keresesinput.Focus();
                 }
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
 
 
-        private void termekpaletta_Click(object sender, EventArgs e)
-        {
+        private void termekpaletta_Click(object sender, EventArgs e) {
+
             XmlReader reader = XmlReader.Create("Termekek.xml");
-            while (reader.Read())
-            {
-                if ((reader.NodeType == XmlNodeType.Element) && (reader.Name == "termekek"))
-                {
-                    if (reader.HasAttributes)
-                    {
+            while (reader.Read()) {
+                if ((reader.NodeType == XmlNodeType.Element) && (reader.Name == "termekek")) {
+                    if (reader.HasAttributes) {
                         termeklista.Items.Add(reader.GetAttribute("name"));
                     }
                 }
@@ -75,34 +64,37 @@ namespace FCIIN5_Beadando
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            try {
                 this.listView1.Items.Clear();
 
                 this.Termekek = from termek in XDocument.Load("Termekek.xml").Root
                                                                   .Descendants("termekek")
 
-                                select new Termek
-                                {
+                                select new Termek {
                                     Ar = Int32.Parse(termek.Element("ár").Value),
                                     Gyartasido = termek.Element("gyártásido").Value,
                                     Gyarto = termek.Element("gyártó").Value,
                                     Szin = termek.Element("szín").Value,
                                     name = termek.Attribute("name").Value
                                 };
-                foreach (Termek term in this.Termekek)
-                {
+                foreach (Termek term in this.Termekek) {
                     listView1.Items.Add(term.name + "\t\t" + term.Ar.ToString() + "\t\t" + term.Gyartasido + "\t\t" + term.Gyarto + "\t\t" + term.Szin);
                 }
                 var attributes = XDocument.Load("Termekek.xml").Root.Attributes();
                 var elements = XDocument.Load("Termekek.xml").Root.Elements();
                 var attr2 = elements.Attributes();
                 var elem2 = elements.Elements();
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
-        }                
+        }
+
+        private void TorlesGomb_Click(object sender, EventArgs e) {
+            if (this.listView1.SelectedItem != null) {
+                this.listView1.Items.Remove(this.listView1.SelectedItem);
+            } else {
+                MessageBox.Show("Nem választottál ki elemet!");
+            }
+        }
     }
 }
