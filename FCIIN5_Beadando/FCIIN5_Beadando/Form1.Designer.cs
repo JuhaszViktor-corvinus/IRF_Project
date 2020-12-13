@@ -41,6 +41,7 @@
             this.MinimumAr = new System.Windows.Forms.TextBox();
             this.MaximumAr = new System.Windows.Forms.TextBox();
             this.TorlesArSzerintGomb = new System.Windows.Forms.Button();
+            this.Mentes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Kereses
@@ -154,17 +155,28 @@
             // 
             this.TorlesArSzerintGomb.Location = new System.Drawing.Point(483, 312);
             this.TorlesArSzerintGomb.Name = "TorlesArSzerintGomb";
-            this.TorlesArSzerintGomb.Size = new System.Drawing.Size(142, 23);
+            this.TorlesArSzerintGomb.Size = new System.Drawing.Size(174, 23);
             this.TorlesArSzerintGomb.TabIndex = 15;
             this.TorlesArSzerintGomb.Text = "Ár szerinti törlés";
             this.TorlesArSzerintGomb.UseVisualStyleBackColor = true;
             this.TorlesArSzerintGomb.Click += new System.EventHandler(this.TorlesArSzerintGomb_Click);
+            // 
+            // Mentes
+            // 
+            this.Mentes.Location = new System.Drawing.Point(716, 350);
+            this.Mentes.Name = "Mentes";
+            this.Mentes.Size = new System.Drawing.Size(176, 62);
+            this.Mentes.TabIndex = 16;
+            this.Mentes.Text = "Mentés";
+            this.Mentes.UseVisualStyleBackColor = true;
+            this.Mentes.Click += new System.EventHandler(this.Mentes_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 465);
+            this.Controls.Add(this.Mentes);
             this.Controls.Add(this.TorlesArSzerintGomb);
             this.Controls.Add(this.MaximumAr);
             this.Controls.Add(this.MinimumAr);
@@ -200,6 +212,7 @@
         private System.Windows.Forms.TextBox MinimumAr;
         private System.Windows.Forms.TextBox MaximumAr;
         private System.Windows.Forms.Button TorlesArSzerintGomb;
+        private System.Windows.Forms.Button Mentes;
     }
 }
 

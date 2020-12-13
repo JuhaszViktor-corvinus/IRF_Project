@@ -138,5 +138,21 @@ namespace FCIIN5_Beadando
                 MessageBox.Show("Nem töltöttél be termék listát!");
             }
         }
+
+        private void Mentes_Click(object sender, EventArgs e) {
+            try {
+                string filePath = "test.csv";
+                StringBuilder sb = new StringBuilder();
+                string header = "Nev;Ar;Gyartasido;Gyarto;Szin";
+                sb.AppendLine(header);
+                foreach (var item in this.listView1.Items) {
+                    var line = ((string)item).Replace("\t\t", ";");
+                    sb.AppendLine(line);
+                } File.WriteAllText(filePath, sb.ToString(), Encoding.UTF8);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
