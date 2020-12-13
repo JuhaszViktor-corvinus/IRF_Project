@@ -33,6 +33,8 @@
             this.keresesieredmeny = new System.Windows.Forms.ListView();
             this.termekpaletta = new System.Windows.Forms.Button();
             this.termeklista = new System.Windows.Forms.ListView();
+            this.ListaGomb = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // Kereses
@@ -82,11 +84,31 @@
             this.termeklista.UseCompatibleStateImageBehavior = false;
             this.termeklista.View = System.Windows.Forms.View.List;
             // 
+            // ListaGomb
+            // 
+            this.ListaGomb.Location = new System.Drawing.Point(486, 38);
+            this.ListaGomb.Name = "ListaGomb";
+            this.ListaGomb.Size = new System.Drawing.Size(75, 23);
+            this.ListaGomb.TabIndex = 5;
+            this.ListaGomb.Text = "Listáz";
+            this.ListaGomb.UseVisualStyleBackColor = true;
+            this.ListaGomb.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.FormattingEnabled = true;
+            this.listView1.Location = new System.Drawing.Point(486, 67);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(700, 225);
+            this.listView1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 465);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.ListaGomb);
             this.Controls.Add(this.termeklista);
             this.Controls.Add(this.termekpaletta);
             this.Controls.Add(this.keresesieredmeny);
@@ -106,6 +128,8 @@
         private System.Windows.Forms.ListView keresesieredmeny;
         private System.Windows.Forms.Button termekpaletta;
         private System.Windows.Forms.ListView termeklista;
+        private System.Windows.Forms.Button ListaGomb;
+        private System.Windows.Forms.ListBox listView1;
     }
 }
 
