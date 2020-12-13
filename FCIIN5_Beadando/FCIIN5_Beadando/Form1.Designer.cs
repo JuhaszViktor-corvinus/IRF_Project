@@ -36,6 +36,11 @@
             this.ListaGomb = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListBox();
             this.TorlesGomb = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.MinimumAr = new System.Windows.Forms.TextBox();
+            this.MaximumAr = new System.Windows.Forms.TextBox();
+            this.TorlesArSzerintGomb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Kereses
@@ -113,11 +118,58 @@
             this.TorlesGomb.UseVisualStyleBackColor = true;
             this.TorlesGomb.Click += new System.EventHandler(this.TorlesGomb_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(480, 353);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Minimum";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(480, 395);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Maximum";
+            // 
+            // MinimumAr
+            // 
+            this.MinimumAr.Location = new System.Drawing.Point(557, 350);
+            this.MinimumAr.Name = "MinimumAr";
+            this.MinimumAr.Size = new System.Drawing.Size(100, 20);
+            this.MinimumAr.TabIndex = 13;
+            // 
+            // MaximumAr
+            // 
+            this.MaximumAr.Location = new System.Drawing.Point(557, 392);
+            this.MaximumAr.Name = "MaximumAr";
+            this.MaximumAr.Size = new System.Drawing.Size(100, 20);
+            this.MaximumAr.TabIndex = 14;
+            // 
+            // TorlesArSzerintGomb
+            // 
+            this.TorlesArSzerintGomb.Location = new System.Drawing.Point(483, 312);
+            this.TorlesArSzerintGomb.Name = "TorlesArSzerintGomb";
+            this.TorlesArSzerintGomb.Size = new System.Drawing.Size(142, 23);
+            this.TorlesArSzerintGomb.TabIndex = 15;
+            this.TorlesArSzerintGomb.Text = "Ár szerinti törlés";
+            this.TorlesArSzerintGomb.UseVisualStyleBackColor = true;
+            this.TorlesArSzerintGomb.Click += new System.EventHandler(this.TorlesArSzerintGomb_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 465);
+            this.Controls.Add(this.TorlesArSzerintGomb);
+            this.Controls.Add(this.MaximumAr);
+            this.Controls.Add(this.MinimumAr);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.TorlesGomb);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.ListaGomb);
@@ -143,6 +195,11 @@
         private System.Windows.Forms.Button ListaGomb;
         private System.Windows.Forms.ListBox listView1;
         private System.Windows.Forms.Button TorlesGomb;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox MinimumAr;
+        private System.Windows.Forms.TextBox MaximumAr;
+        private System.Windows.Forms.Button TorlesArSzerintGomb;
     }
 }
 

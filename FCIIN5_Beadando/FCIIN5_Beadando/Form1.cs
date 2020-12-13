@@ -96,5 +96,47 @@ namespace FCIIN5_Beadando
                 MessageBox.Show("Nem választottál ki elemet!");
             }
         }
+
+        private void TorlesArSzerintGomb_Click(object sender, EventArgs e) {
+            if (this.Termekek != null) {
+                
+                List<string> torlendoTermekekNevei = new List<string>();
+                if (String.IsNullOrEmpty(this.MinimumAr.Text) && String.IsNullOrEmpty(this.MaximumAr.Text)) {
+                    MessageBox.Show("Nem adtál meg minimum vagy maximum értéket!");
+                } else if (!String.IsNullOrEmpty(this.MinimumAr.Text) && String.IsNullOrEmpty(this.MaximumAr.Text)) {
+                    foreach (var termek in this.Termekek) {
+                        if (termek.Ar < Int32.Parse(this.MinimumAr.Text)) {
+                            torlendoTermekekNevei.Add(termek.name);
+                        }
+                    };
+                } else if (String.IsNullOrEmpty(this.MinimumAr.Text) && !String.IsNullOrEmpty(this.MaximumAr.Text)) {
+                    foreach (var termek in this.Termekek) {
+                        if (termek.Ar > Int32.Parse(this.MaximumAr.Text)) {
+                            torlendoTermekekNevei.Add(termek.name);
+                        }
+                    };
+                }
+                else {
+                    foreach (var termek in this.Termekek) {
+                        if (termek.Ar <= Int32.Parse(this.MaximumAr.Text) && termek.Ar > Int32.Parse(this.MinimumAr.Text)) {
+                            torlendoTermekekNevei.Add(termek.name);
+                        }
+                    };
+                }
+                List<object> torlendoItemek = new List<object>();
+                foreach (var nev in torlendoTermekekNevei) {
+                    foreach (var item in this.listView1.Items) {
+                        if (item.ToString().Contains(nev)) {
+                            torlendoItemek.Add(item);
+                        }
+                    }
+                }
+                foreach (var item in torlendoItemek) {
+                    this.listView1.Items.Remove(item);
+                }
+            } else {
+                MessageBox.Show("Nem töltöttél be termék listát!");
+            }
+        }
     }
 }
